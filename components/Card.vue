@@ -1,15 +1,17 @@
 <template>
   <button
     @click="handleCard"
-    class="card dark:bg-slate-700 bg-white flex flex-col items-center max-w-[90%] w-[90%] rounded-md shadow-lg gap-3"
+    class="card dark:bg-slate-700 bg-white flex flex-col items-center max-w-[90%] w-[90%] lg:w-full lg:h-[25rem] rounded-md shadow-lg gap-3"
   >
     <img
       :src="country.flags?.png"
       :alt="country.name.official + 'flag'"
       class="w-full rounded-t-md"
     />
-    <div class="info w-full p-5 flex flex-col items-start gap-5 pb-5">
-      <h1 class="name font-bold text-lg">{{ country.name.official }}</h1>
+    <div class="info w-full p-5 flex flex-col items-start gap-5 pb-5 lg:pb-10">
+      <h1 class="name font-bold text-lg ">
+        {{ country.name.common }}
+      </h1>
       <div class="flex flex-col items-start gap-1">
         <div class="flex gap-1">
           <div class="font-semibold">Population:</div>

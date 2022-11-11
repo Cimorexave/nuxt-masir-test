@@ -48,16 +48,19 @@
 <script>
 export default {
   layout: "layout",
-  async asyncData({ params, redirect }) {
+  asyncData({ params, redirect }) {
     console.log(params);
     try {
       let country = {};
       fetch(`https://restcountries.com/v3.1/name/${params.country}`).then(
         (res) => {
-          res.json().then((res) => {
-            country = res[0];
-            console.log(country);
-          });
+          res
+            .json()
+            .then((res) => {
+              country = res[0];
+              console.log(country);
+            })
+            .catch((err) => console.log(err));
         }
       );
       return { country };
@@ -65,11 +68,6 @@ export default {
       console.error(err);
       redirect("/");
     }
-  },
-  data() {
-    return {
-      country: Object,
-    };
   },
 };
 </script>
