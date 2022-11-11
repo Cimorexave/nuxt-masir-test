@@ -1,5 +1,5 @@
 <template>
-  <div class="p-20">
+  <div class="p-20 dark:bg-slate-800 dark:text-white h-screen bg-gray-100">
     Error: {{ error.statusCode }} <br>
     {{ error.message }}
   </div>
