@@ -1,6 +1,6 @@
 <template>
   <button
-    class="card flex flex-col items-center max-w-[90%] w-[90%] rounded-md shadow-lg gap-3"
+    class="card dark:bg-slate-700 bg-white flex flex-col items-center max-w-[90%] w-[90%] rounded-md shadow-lg gap-3"
   >
     <img
       :src="country.flags?.png"

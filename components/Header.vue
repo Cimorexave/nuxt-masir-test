@@ -1,11 +1,11 @@
 <template>
   <header
-    class="flex flex-row justify-between items-center p-5 w-full bg-white shadow-xl"
+    class="flex flex-row justify-between items-center p-5 w-full dark:bg-slate-700 dark:text-white bg-white shadow-xl"
   >
     <div class="font-bold">Where in the world?</div>
-    <button class="">
+    <button @click="switchMode" class="">
       <!-- <v-icon> {{ mdiWeatherNight }} </v-icon> -->
-      Dark Mode
+      {{ isDark ? "Light" : "Dark" }} Mode
     </button>
   </header>
 </template>
@@ -13,5 +13,16 @@
 import { mdiWeatherNight } from "@mdi/js";
 export default {
   name: "Header",
+  data() {
+    return {
+      isDark: false,
+    };
+  },
+  methods: {
+    switchMode() {
+      this.isDark = !this.isDark;
+      this.$emit("switchedMode", this.isDark);
+    },
+  },
 };
 </script>

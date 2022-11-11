@@ -1,6 +1,6 @@
 <template>
-  <div class="w-screen">
-    <Header />
+  <div :class="isDark ? 'dark' : ''">
+    <Header @switchedMode="switchMode" />
     <!-- the content goes:  -->
     <Nuxt />
   </div>
@@ -8,5 +8,16 @@
 <script>
 export default {
   name: "layout",
+  data() {
+    return {
+      isDark: false,
+    };
+  },
+  methods: {
+    switchMode(isDark) {
+      console.log(isDark);
+      this.isDark = isDark;
+    },
+  },
 };
 </script>

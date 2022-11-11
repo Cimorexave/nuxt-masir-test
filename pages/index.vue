@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-gray-100 min-h-screen flex flex-col items-center py-5 gap-10">
+  <div
+    class="bg-gray-100 dark:bg-slate-800 dark:text-white min-h-screen flex flex-col items-center py-5 gap-10"
+  >
     <Actions />
     <Main />
   </div>
