@@ -1,5 +1,6 @@
 <template>
   <button
+    @click="handleCard"
     class="card dark:bg-slate-700 bg-white flex flex-col items-center max-w-[90%] w-[90%] rounded-md shadow-lg gap-3"
   >
     <img
@@ -35,6 +36,11 @@ export default {
   name: "Card",
   props: {
     country: Object,
+  },
+  methods: {
+    handleCard() {
+      this.$router.push(`/${this.country.name.official}`);
+    },
   },
 };
 </script>
