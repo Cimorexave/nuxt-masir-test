@@ -5,8 +5,10 @@
   >
     <Actions
       @regionChange="regionChange"
-      @sortChange="sortChange"
+      @sortbypopulation="handleSortByPopulation"
       @searchChange="handleSearch"
+      @sortbyname="handleSortByName"
+      :isActive="isActive"
     />
     <Main :countries="filteredCountries" />
   </div>
@@ -30,6 +32,7 @@ export default {
       filteredCountries: [
         { id: 0, name: "", population: 0, region: "", capital: "", flag: "" },
       ],
+      isActive: String,
     };
   },
   methods: {
@@ -38,13 +41,22 @@ export default {
         (country) => region === country.region
       );
     },
-    sortChange(sortIndex) {
-      this.filteredCountries.sort();
+    handleSortByPopulation() {
+      this.isActive = "population";
+      this.filteredCountries = this.filteredCountries.sort(
+        (a, b) => +b.population - +a.population
+      );
     },
     handleSearch(keyword) {
       console.log(keyword);
       this.filteredCountries = this.countries.filter((country) =>
         country.name.official.includes(keyword)
+      );
+    },
+    handleSortByName() {
+      this.isActive = "name";
+      this.filteredCountries = this.filteredCountries.sort((a, b) =>
+        a.name.common.localeCompare(b.name.common)
       );
     },
   },
