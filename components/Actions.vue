@@ -6,17 +6,17 @@
       @input="handleSearch"
       type="text"
       placeholder="Search for a country..."
-      class="rounded-md shadow-md dark:bg-slate-700 bg-white w-[90%] lg:w-[50%] p-5 text-gray-100"
+      class="rounded-md shadow-md dark:bg-slate-700 bg-white w-[90%] lg:w-[50%] p-5 text-black dark:text-white"
     />
     <div
-      class="input-select flex flex-row justify-end gap-1 lg:gap-3 text-center"
+      class="input-select w-[90%] text-sm lg:text-md flex flex-row lg:justify-end gap-1 lg:gap-3 text-center"
     >
       <div
-        class="flex items-center justify-evenly dark:bg-slate-700 dark:text-white bg-white w-3 px-5 p-3 rounded-md shadow-md"
+        class="flex items-center lg:justify-evenly font-bold dark:bg-slate-700 dark:text-white bg-white w-3 lg:px-5 lg:p-3 rounded-md shadow-md"
       >
         <label for="region">Filter By Region: </label>
         <select
-          class="text-center"
+          class="text-center px-5 lg:px-8"
           @change="handleSelect"
           name="region"
           id="region"
@@ -31,8 +31,8 @@
       <button
         :class="
           isActive === 'population'
-            ? 'bg-gray-200 dark:bg-slate-600 text-sm p-5 rounded-md shadow-md'
-            : 'bg-white dark:bg-slate-700 text-sm p-5 rounded-md shadow-md'
+            ? 'bg-gray-200 dark:bg-slate-600 text-sm lg:p-5 p-2 basis-1/4 rounded-md shadow-md'
+            : 'bg-white dark:bg-slate-700 text-sm lg:p-5 p-2 basis-1/4 rounded-md shadow-md'
         "
         @click="handleSortByPopulation"
       >
@@ -41,8 +41,8 @@
       <button
         :class="
           isActive === 'name'
-            ? 'bg-gray-200 dark:bg-slate-600 text-sm p-5 rounded-md shadow-md'
-            : 'bg-white dark:bg-slate-700 text-sm p-5 rounded-md shadow-md'
+            ? 'bg-gray-200 dark:bg-slate-600 text-sm lg:p-5 p-2 basis-1/4 rounded-md shadow-md'
+            : 'bg-white dark:bg-slate-700 text-sm lg:p-5 p-2 basis-1/4 rounded-md shadow-md'
         "
         @click="handleSortByName"
       >

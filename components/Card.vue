@@ -1,7 +1,7 @@
 <template>
   <button
     @click="handleCard"
-    class="card dark:bg-slate-700 bg-white flex flex-col items-center max-w-[90%] w-[90%] lg:w-full lg:h-[27rem] rounded-md shadow-lg gap-3"
+    class="card hover:scale-105 dark:hover:bg-slate-600 hover:bg-gray-200 transition-all duration-200 dark:bg-slate-700 bg-white flex flex-col items-center max-w-[90%] w-[90%] lg:w-full lg:h-[27rem] rounded-md shadow-lg gap-3"
   >
     <img
       :src="country.flags?.png"

@@ -10,7 +10,7 @@ The link to the project information:
 
 Navgiate to the project folder after downloading and installing all the packages and:
 1 - To run in dev mode in terminal run: `docker-compose up -d --build`. <br>
-Visit `localhost:3000`
+Visit `localhost:3000` <br>
 2 - To run in production mode run: `docker-compose -f docker-compose.prod.yml up -d --build`. <br>
 Visit `localhost:8080`
 
