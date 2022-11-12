@@ -23,4 +23,4 @@ You can go back to Home (Index) by clicking the corresponding button.
 ## Demo
 
 Visit a demo of the application:
-`loading...`
+`https://cimorexave.github.io/nuxt-masir-test/`
