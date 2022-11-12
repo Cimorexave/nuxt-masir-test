@@ -16,7 +16,7 @@
         <option value="Asia">Asia</option>
         <option value="Europe">Europe</option>
         <option value="Americas">Americas</option>
-        <option value="Oceaniea">Oceaniea</option>
+        <option value="Oceaniea">Oceania</option>
         <option value="Africa">Africa</option>
       </select>
       <label for="region">Sort By: </label>
