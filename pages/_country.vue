@@ -116,8 +116,29 @@ export default {
   },
   methods: {
     handleBorderCountries(name) {
-      this.$router.push(`/${name}`);
+      const fullName = this.countries.filter(country => country.altSpelling[0] === name).name.common
+      this.$router.push(`/${fullName}`);
     },
   },
+  mounted() {
+    try {
+      fetch("https://restcountries.com/v3.1/all")
+        .then((res) => {
+          console.log(res);
+          res.json().then((res) => {
+            console.log(res);
+            this.countries = [...res];
+          });
+        })
+        .catch((err) => console.log(err));
+    } catch (err) {
+      console.error(err);
+    }
+  },
+  data() {
+    return {
+      countries = Array
+    }
+  }
 };
 </script>

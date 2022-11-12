@@ -12,7 +12,7 @@
       class="input-select flex flex-row justify-end gap-1 lg:gap-3 text-center"
     >
       <div
-        class="flex items-center justify-evenly bg-white w-3 px-5 p-3 rounded-md shadow-md"
+        class="flex items-center justify-evenly dark:bg-slate-700 dark:text-white bg-white w-3 px-5 p-3 rounded-md shadow-md"
       >
         <label for="region">Filter By Region: </label>
         <select
