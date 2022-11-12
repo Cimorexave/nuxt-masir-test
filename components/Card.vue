@@ -9,7 +9,7 @@
       class="w-full rounded-t-md object-cover"
     />
     <div class="info w-full p-5 flex flex-col items-start gap-5 pb-5 lg:pb-10">
-      <h1 class="name font-bold text-lg ">
+      <h1 class="name font-bold text-lg">
         {{ country.name.common }}
       </h1>
       <div class="flex flex-col items-start gap-1">
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     handleCard() {
-      this.$router.push(`/${this.country.name.official}`);
+      this.$router.push(`/${this.country.name.common}`);
     },
   },
 };
